@@ -10,6 +10,7 @@ import seaborn as sns
 
 
 mlflow.set_tracking_uri('http://localhost:5000')
+mlflow.autolog()
 mlflow.set_experiment("mlops_mflow")
 
 wine = load_wine()
@@ -33,11 +34,6 @@ with mlflow.start_run():
     accuracy = accuracy_score(y_test,y_pred)
 
 
-    mlflow.log_metric("accuracy", accuracy)
-    mlflow.log_params(params)
-    # mlflow.set_tag("Training Info", "Basic RFC with wine data")
-    # confusion matrix 
-
     cm = confusion_matrix(y_test,y_pred)
     plt.figure(figsize=(5, 4))
     sns.heatmap(cm,annot = True,cmap = "Blues",xticklabels= wine.target_names,yticklabels=wine.target_names)
@@ -47,10 +43,11 @@ with mlflow.start_run():
     plt.savefig("confusion-matrix.png")
     
 
-    mlflow.log_artifact("confusion-matrix.png")
+    
     mlflow.log_artifact(__file__)
+    
     mlflow.set_tags({"Author":"Vikash","Project":"wine Classification"})
-    mlflow.sklearn.log_model(rf,"RandomForestModel")
+ 
    
 
     print(accuracy)

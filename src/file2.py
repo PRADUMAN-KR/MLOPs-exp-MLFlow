@@ -7,10 +7,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
+from dagshub import init
+import os
+from dotenv import load_dotenv
 
-
-mlflow.set_tracking_uri('http://localhost:5000')
-mlflow.set_experiment("mlops_mflow")
+init(repo_owner='PRADUMAN-KR', repo_name='MLOPs-exp-MLFlow', mlflow=True)
+mlflow.set_tracking_uri("https://dagshub.com/PRADUMAN-KR/MLOPs-exp-MLFlow.mlflow")
+mlflow.set_experiment("mlops_mflow_exp")
 
 wine = load_wine()
 x = wine.data 
@@ -52,9 +55,9 @@ with mlflow.start_run():
     mlflow.set_tags({"Author":"Vikash","Project":"wine Classification"})
     mlflow.sklearn.log_model(rf,"RandomForestModel")
    
-
     print(accuracy)
 
 
 
 
+  

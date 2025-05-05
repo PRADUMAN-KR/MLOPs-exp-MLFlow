@@ -10,7 +10,6 @@ import seaborn as sns
 
 
 mlflow.set_tracking_uri('http://localhost:5000')
-mlflow.set_experiment("mlops_mflow")
 
 wine = load_wine()
 x = wine.data 
@@ -49,8 +48,7 @@ with mlflow.start_run():
 
     mlflow.log_artifact("confusion-matrix.png")
     mlflow.log_artifact(__file__)
-    mlflow.set_tags({"Author":"Vikash","Project":"wine Classification"})
-    mlflow.sklearn.log_model(rf,"RandomForestModel")
+
    
 
     print(accuracy)

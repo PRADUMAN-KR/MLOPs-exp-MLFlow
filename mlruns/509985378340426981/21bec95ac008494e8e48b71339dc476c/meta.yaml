@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/509985378340426981/21bec95ac008494e8e48b71339dc476c/artifacts
+end_time: 1746442859591
+entry_point_name: ''
+experiment_id: '509985378340426981'
+lifecycle_stage: active
+run_id: 21bec95ac008494e8e48b71339dc476c
+run_name: clean-vole-832
+run_uuid: 21bec95ac008494e8e48b71339dc476c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746442856820
+status: 3
+tags: []
+user_id: ameo

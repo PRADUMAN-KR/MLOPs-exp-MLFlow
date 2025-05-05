@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/509985378340426981/52964c0fbe974476a80b17551c6b0b34/artifacts
+end_time: 1746450434206
+entry_point_name: ''
+experiment_id: '509985378340426981'
+lifecycle_stage: active
+run_id: 52964c0fbe974476a80b17551c6b0b34
+run_name: enthused-pug-402
+run_uuid: 52964c0fbe974476a80b17551c6b0b34
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746450431316
+status: 3
+tags: []
+user_id: ameo

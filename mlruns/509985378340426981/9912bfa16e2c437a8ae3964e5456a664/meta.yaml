@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/509985378340426981/9912bfa16e2c437a8ae3964e5456a664/artifacts
+end_time: 1746433968684
+entry_point_name: ''
+experiment_id: '509985378340426981'
+lifecycle_stage: active
+run_id: 9912bfa16e2c437a8ae3964e5456a664
+run_name: stately-mule-8
+run_uuid: 9912bfa16e2c437a8ae3964e5456a664
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746433968460
+status: 3
+tags: []
+user_id: ameo
